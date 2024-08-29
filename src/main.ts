@@ -12,13 +12,17 @@ import { fluid2 } from "./lessons/fragment_shader_fluid_2";
 import { whiteNoise } from "./lessons/fragment_shader_white_noise";
 import { wave } from "./lessons/fragment_shader_wave";
 import { rainbow } from "./lessons/fragment_shader_rainbow_spin";
+import { threeJsExample } from "./lessons/three_js_shader";
 
-helloWorld("#helloWorld");
-gradientShader("#gradientShader");
-polygon("#polygon");
-warpGrid("#warpGrid");
-fluid("#fluid");
-fluid2("#fluid2");
-whiteNoise("#whiteNoise");
-wave("#wave");
-rainbow("#rainbow")
+window.addEventListener("load", () => {
+  helloWorld("#helloWorld");
+  gradientShader("#gradientShader");
+  polygon("#polygon");
+  warpGrid("#warpGrid");
+  fluid("#fluid");
+  fluid2("#fluid2");
+  whiteNoise("#whiteNoise");
+  wave("#wave");
+  rainbow("#rainbow");
+  threeJsExample("#threeJsSample")
+});
