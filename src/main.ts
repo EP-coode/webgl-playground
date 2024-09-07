@@ -13,6 +13,7 @@ import { whiteNoise } from "./lessons/fragment_shader_white_noise";
 import { wave } from "./lessons/fragment_shader_wave";
 import { rainbow } from "./lessons/fragment_shader_rainbow_spin";
 import { threeJsExample } from "./lessons/three_js_shader";
+import { threeJsExampleGblImport } from "./lessons/three_js_blender_import";
 
 window.addEventListener("load", () => {
   helloWorld("#helloWorld");
@@ -24,5 +25,6 @@ window.addEventListener("load", () => {
   whiteNoise("#whiteNoise");
   wave("#wave");
   rainbow("#rainbow");
-  threeJsExample("#threeJsSample")
+  threeJsExample("#threeJsSample");
+  threeJsExampleGblImport("#threeJsExampleGblImport")
 });
