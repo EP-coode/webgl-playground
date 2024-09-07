@@ -1,22 +1,22 @@
 import {
-  AmbientLight,
+  // AmbientLight,
   Color,
   DirectionalLight,
-  DoubleSide,
-  EquirectangularReflectionMapping,
+  // DoubleSide,
+  // EquirectangularReflectionMapping,
   Mesh,
-  MeshBasicMaterial,
+  // MeshBasicMaterial,
   MeshStandardMaterial,
   PerspectiveCamera,
   Scene,
-  TextureLoader,
-  Vector3,
+  // TextureLoader,
+  // Vector3,
   WebGLRenderer,
 } from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-import { RGBELoader } from "three/examples/jsm/Addons.js";
+//import { RGBELoader } from "three/examples/jsm/Addons.js";
 
 export function threeJsExampleGblImport(canvasSelector: string) {
   const canvas = document.querySelector<HTMLCanvasElement>(canvasSelector);
@@ -44,7 +44,7 @@ export function threeJsExampleGblImport(canvasSelector: string) {
   renderer.setPixelRatio(window.devicePixelRatio);
   camera.position.z = 5;
 
-  const rgbeloader = new RGBELoader();
+ // const rgbeloader = new RGBELoader();
   //const textureLoader = new TextureLoader();
   const loader = new GLTFLoader();
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -76,10 +76,10 @@ export function threeJsExampleGblImport(canvasSelector: string) {
     wireframe: false,
   });
 
-  loader.load("/public/3dobjects/syringe/syringe.glb", (data) => {
-    const syringeBodyMesh: Mesh = data.scene.getObjectByName(
-      "syringe_body003"
-    ) as Mesh;
+  loader.load("./3dobjects/syringe/syringe.glb", (data) => {
+    // const syringeBodyMesh: Mesh = data.scene.getObjectByName(
+    //   "syringe_body003"
+    // ) as Mesh;
     const syringeFluidObj: Mesh = data.scene.getObjectByName(
       "fluid003"
     ) as Mesh;
